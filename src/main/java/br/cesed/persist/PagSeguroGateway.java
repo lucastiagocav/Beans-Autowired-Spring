@@ -10,10 +10,13 @@ public class PagSeguroGateway implements GatewayPagamento {
 
 	public StatusTransacao realizarPagamento(DadosCartao dados, double valor) {
 		if (ValidaCPF.isCPF(dados.getCpf()) && dados.getSaldo() >= valorPedido) {
+			System.out.println("APROVADO");
 			return StatusTransacao.APROVADO;
 		} else if (ValidaCPF.isCPF(dados.getCpf()) && dados.getSaldo() < valorPedido) {
+			System.out.println("SALDO INSUFICIENTE");
 			return StatusTransacao.SALDO_INSUFICIENTE;
 		}
+		System.out.println("RECUSADO");
 		return StatusTransacao.RECUSADO;
 	}
 
