@@ -16,8 +16,8 @@ public class Application {
 		DadosCartao dados = new DadosCartao();
 		dados.setAgencia(12345);
 		dados.setConta(43210);
-		dados.setCpf("84589094215");
-		dados.setTitular("Lucas Tiago C Silva"); 
+		dados.setCpf("2345234523");
+		dados.setTitular("Lucas Tiago"); 
 		dados.setSaldo(5000);
 		System.out.println(dados);
 		
